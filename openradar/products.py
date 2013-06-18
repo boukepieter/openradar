@@ -435,8 +435,8 @@ class CalibratedProduct(object):
         try:
             dataloader.processdata()
             # Temporary for Lex investigation:
-            #dataloader.rainstations = [r for r in dataloader.rainstations
-                                       #if r.station_id not in ['10.P.30', 'L0006', 'OS039']]
+            dataloader.rainstations = [r for r in dataloader.rainstations
+                                       if r.station_id not in ['10.P.30', 'L0006', 'OS039']]
             # End of temporary filter stations
             stations_count = len(dataloader.rainstations)
             data_count = len([r
